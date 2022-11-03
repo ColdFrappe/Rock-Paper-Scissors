@@ -46,10 +46,27 @@ let computerScore = 0
 let playerScore = 0
 
 function game() {
+    computerScore = 0
+    playerScore = 0
     for (let i = 0; i < 5; i++) {
         console.log(playRound())
         console.log('Computer Score: ' + computerScore)
         console.log('Player Score: ' + playerScore)
         console.log(i)
+    }
+    
+    console.log(computerScore)
+    console.log(playerScore)
+
+    if (playerScore === computerScore) {
+        console.log("Game! Draw!")
+    }
+    
+    else if (playerScore > computerScore) {
+        console.log("Game! Player wins!")
+    }
+
+    else if (playerScore < computerScore) {
+        console.log("Game! Computer wins!")
     }
 }
